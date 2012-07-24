@@ -1,0 +1,6 @@
+[submodule "bundle/w3m.vim"]
+	path = bundle/w3m.vim
+	url = https://github.com/yuratomo/w3m.vim.git
+[submodule "bundle/vundle"]
+	path = bundle/vundle
+	url = https://github.com/gmarik/vundle.git
