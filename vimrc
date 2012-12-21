@@ -10,8 +10,9 @@ Bundle 'https://github.com/majutsushi/tagbar.git'
 Bundle 'scrooloose/nerdtree'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'yuratomo/w3m.vim'
-
-Bundle 'http://git.wincent.com/command-t.git'
+Bundle 'vim-scripts/grep.vim.git'
+" Bundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
+" Bundle 'http://git.wincent.com/command-t.git'
 
 " filetype plugin indent on     " required! 
 
@@ -20,7 +21,7 @@ Bundle 'http://git.wincent.com/command-t.git'
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set nocompatible	" not compatible with the old-fashion vi mode
+set nocompatible  " not compatible with the old-fashion vi mode
 set bs=2		" allow backspacing over everything in insert mode
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
@@ -134,3 +135,16 @@ nnoremap <silent> <F7> :TagbarToggle<CR>
 " set focus to TagBar when opening it
 let g:tagbar_autofocus = 1
 let g:tagbar_ctags_bin='ctags'
+
+"---------------------------------------------------------------------------
+"" Grep
+"---------------------------------------------------------------------------
+nnoremap <silent> <F3> :Grep<CR>
+"---------------------------------------------------------------------------
+"" Grep
+"---------------------------------------------------------------------------
+nnoremap <silent> <F3> :Grep<CR>
+let Grep_Skip_Files = '*.tag *.out *.image *.o'
+let Grep_Skip_Dirs = 'git'
+
+" nmap <s-f9> :exec 'vimgrep /\<'.expand('<cword>').'\>/g **/*.[ch] **/*.[ch]pp **/*.java **/*.p[ly] **/*.rb'<CR>
